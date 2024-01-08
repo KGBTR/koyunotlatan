@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  koyunkirpan:
+    container_name: koyunkirpan
+    image: koyunkirpan:dev
+    build: .
+    # Required for systemd boot as PID 1
+    privileged: true
+    working_dir: /home/koyunkirpan/app
+    volumes:
+       - ./koyunkirpan.service:/etc/systemd/system/koyunkirpan.service
+       - ./koyunkirpan.timer:/etc/systemd/system/koyunkirpan.timer
+       - ./requirements.txt:/home/koyunkirpan/app/requirements.txt
+       - ./koyunkirpan:/home/koyunkirpan/app/koyunkirpan
+       - ./praw.ini:/home/koyunkirpan/app/praw.ini
+       - ./logger.ini:/home/koyunkirpan/app/logger.ini
+       - ./logs:/var/log/koyunkirpan
+    environment:
+      - NO_REPLY=True
