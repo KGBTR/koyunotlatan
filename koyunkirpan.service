@@ -1,0 +1,14 @@
+[Unit]
+Description=Koyun kırpan daemon service
+Wants=network-online.target local-fs.target koyunkirpan.timer
+After=network-online.target local-fs.target
+
+[Service]
+Type=exec
+ExecStart=/home/koyunkirpan/app/.venv/bin/python /home/koyunkirpan/app/koyunkirpan/main.py $OPTIONS
+Environment=PYTHONUNBUFFERED=true
+SyslogIdentifier=koyunkirpan
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
