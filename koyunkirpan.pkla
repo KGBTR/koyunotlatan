@@ -1,0 +1,6 @@
+[Allow koyunkirpan user to manage start/stop/restart/reload/enable/disable systemd services]
+Identity=unix-user:koyunkirpan
+Action=org.freedesktop.systemd1.manage-units;org.freedesktop.systemd1.manage-unit-files;org.freedesktop.systemd1.manage-unit-files;org.freedesktop.systemd1.set-environment;org.freedesktop.systemd1.reload-daemon
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
