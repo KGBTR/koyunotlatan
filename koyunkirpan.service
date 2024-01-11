@@ -5,7 +5,7 @@ After=network-online.target local-fs.target
 
 [Service]
 Type=exec
-ExecStart=/home/koyunkirpan/app/.venv/bin/python /home/koyunkirpan/app/koyunkirpan/main.py $OPTIONS
+ExecStart=/home/koyunkirpan/service/.venv/bin/python /home/koyunkirpan/service/koyunkirpan/main.py $OPTIONS
 Environment=PYTHONUNBUFFERED=true
 SyslogIdentifier=koyunkirpan
 NotifyAccess=all

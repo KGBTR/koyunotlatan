@@ -7,14 +7,16 @@ services:
     build: .
     # Required for systemd boot as PID 1
     privileged: true
-    working_dir: /home/koyunkirpan/app
+    working_dir: /home/koyunkirpan/service
     volumes:
        - ./koyunkirpan.service:/etc/systemd/system/koyunkirpan.service
        - ./koyunkirpan.timer:/etc/systemd/system/koyunkirpan.timer
-       - ./requirements.txt:/home/koyunkirpan/app/requirements.txt
-       - ./koyunkirpan:/home/koyunkirpan/app/koyunkirpan
-       - ./praw.ini:/home/koyunkirpan/app/praw.ini
-       - ./logger.ini:/home/koyunkirpan/app/logger.ini
-       - ./logs:/var/log/koyunkirpan
+       # - ./koyunkirpan.service:/home/koyunkirpan/.config/systemd/user/koyunkirpan.service
+       # - ./koyunkirpan.timer:/home/koyunkirpan/.config/systemd/user/koyunkirpan.timer
+       - ./koyunkirpan.pkla:/etc/polkit-1/localauthority/50-local.d/koyunkirpan.pkla
+       - ./requirements.txt:/home/koyunkirpan/service/requirements.txt
+       - ./koyunkirpan:/home/koyunkirpan/service/koyunkirpan
+       - ./praw.ini:/home/koyunkirpan/.config/praw.ini
+       - ./logs:${BASE_LOG_DIR:-/var/log/koyunkirpan}
     environment:
       - NO_REPLY=True
