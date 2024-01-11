@@ -14,7 +14,6 @@ from psaw import PushshiftAPI
 
 from koyunkirpan.binary_comb import BinaryComb
 from koyunkirpan.constants import NO_REPLY
-import koyunkirpan.logger
 
 warnings.filterwarnings('ignore')
 
