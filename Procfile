@@ -1,0 +1,1 @@
+service: python koyunkirpan/main.py
