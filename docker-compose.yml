@@ -18,5 +18,5 @@ services:
        - ./koyunkirpan:/home/koyunkirpan/service/koyunkirpan
        - ./praw.ini:/home/koyunkirpan/.config/praw.ini
        - ./logs:${BASE_LOG_DIR:-/var/log/koyunkirpan}
-    environment:
-      - NO_REPLY=True
+    env_file:
+      - .env.docker
