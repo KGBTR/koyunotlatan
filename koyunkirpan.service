@@ -9,6 +9,7 @@ ExecStart=/home/koyunkirpan/service/.venv/bin/python /home/koyunkirpan/service/k
 Environment=PYTHONUNBUFFERED=true
 SyslogIdentifier=koyunkirpan
 NotifyAccess=all
+User=koyunkirpan
 
 [Install]
 WantedBy=multi-user.target
