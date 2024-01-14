@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "koyunotlatan"
+version = "0.1.0"
+description = "Ak koyun ak bacağından, kara koyun kara bacağından asılır. Fakat koyunotlatan'ın mahareti, renkten öte, otlatma sanatındadır."
+authors = ["oldventura <oldventura@protonmail.com>"]
+maintainers = ["Asim-Tahir <asimtahir@protonmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+keywords = ["reddit", "reddit-bot", "chatbot", "chat", "bot"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: Microsoft :: Windows :: Windows 10",
+  "Operating System :: Microsoft :: Windows :: Windows 11",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Natural Language :: Turkish",
+  "Topic :: Communications :: Chat",
+]
+packages = [
+    { include = "koyunotlatan" },
+]
+
+[tool.poetry.scripts]
+dev = 'koyunotlatan.main:main'
+
+[tool.poetry.dependencies]
+python = "~3.11"
+praw = "^7.7.1"
+psaw = "^0.1.0"
+numpy = "^1.26.3"
+
+[tool.poetry.urls]
+Homepage = "https://github.com/KGBTR/koyunotlatan"
+Documentation = "https://github.com/KGBTR/koyunotlatan/README.md"
+Repository = "https://github.com/KGBTR/koyunotlatan.git"
+Issues = "https://github.com/KGBTR/koyunotlatan/issues"
+Changelog = "https://github.com/KGBTR/koyunotlatan/blob/main/CHANGELOG.md"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

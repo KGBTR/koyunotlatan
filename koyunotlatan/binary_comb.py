@@ -1,6 +1,4 @@
-#!/usr/bin/python
-
-class BinComb:
+class BinaryComb:
   def __init__(self, keywords):
     self.keywords = keywords
     self.comb     = len(self.keywords)

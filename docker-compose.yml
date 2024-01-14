@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  koyunotlatan:
+    container_name: koyunotlatan
+    image: koyunotlatan:dev
+    build: .
+    # Required for systemd boot as PID 1
+    privileged: true
+    working_dir: /home/koyunotlatan/service
+    volumes:
+       - ./koyunotlatan.service:/etc/systemd/system/koyunotlatan.service
+       - ./koyunotlatan.timer:/etc/systemd/system/koyunotlatan.timer
+       # - ./koyunotlatan.service:/home/koyunotlatan/.config/systemd/user/koyunotlatan.service
+       # - ./koyunotlatan.timer:/home/koyunotlatan/.config/systemd/user/koyunotlatan.timer
+       - ./koyunotlatan.pkla:/etc/polkit-1/localauthority/50-local.d/koyunotlatan.pkla
+       - ./requirements.txt:/home/koyunotlatan/service/requirements.txt
+       - ./koyunotlatan:/home/koyunotlatan/service/koyunotlatan
+       - ./praw.ini:/home/koyunotlatan/.config/praw.ini
+       - ./logs:${BASE_LOG_DIR:-/var/log/koyunotlatan}
+    env_file:
+      - .env.docker
