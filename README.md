@@ -25,7 +25,8 @@
     Want to support <a href="https://github.com/oldventura">oldventura</a>, who brought us <code><a href="https://github.com/oldventura/koyunkirpan">koyunkirpan</a></code>, you can <a href="https://www.buymeacoffee.com/oldventura" target="_blank">buy him a coffee</a>.
   </small>
 
-  <br>
+  <br/>
+  <br/>
 
   <a href="https://www.buymeacoffee.com/oldventura" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="200">
