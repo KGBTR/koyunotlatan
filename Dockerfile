@@ -21,6 +21,9 @@ COPY --chown=koyunotlatan:koyunotlatan koyunotlatan.service koyunotlatan.timer /
 
 WORKDIR /home/${user}/service
 
+# Set python runtime directory
+ENV PYTHONPATH=/home/${user}/service
+
 # Set virtual enviroment directory as enviroment variable
 ENV VIRTUAL_ENV=/home/${user}/service/.venv
 # Create virtual enviroment if not exist
