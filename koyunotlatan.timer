@@ -1,9 +1,9 @@
 [Unit]
-Description="Koyun kırpan timer that runs on every hour"
-Wants=koyunkirpan.service
+Description="Koyun Otlatan timer that runs on every hour"
+Wants=koyunotlatan.service
 
 [Timer]
-Unit=koyunkirpan.service
+Unit=koyunotlatan.service
 # Run every hour
 OnCalendar=*-*-* *:00:00
 RandomizedDelaySec=10m

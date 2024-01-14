@@ -8,9 +8,9 @@ from typing import TYPE_CHECKING
 from praw import Reddit
 from praw.models import Message, Comment
 
-from koyunkirpan.runner import Runner
-import koyunkirpan.logger
-from koyunkirpan.constants import (
+from koyunotlatan.runner import Runner
+import koyunotlatan.logger
+from koyunotlatan.constants import (
   NO_REPLY,
   BOT_CLIENT_ID,
   BOT_CLIENT_SECRET,
@@ -18,7 +18,7 @@ from koyunkirpan.constants import (
   BOT_PASSWORD,
 )
 
-logger = logging.getLogger('koyunkirpan')
+logger = logging.getLogger('koyunotlatan')
 logger.setLevel(logging.INFO)
 
 def main():
@@ -44,7 +44,7 @@ def main():
 
     runner = Runner(reddit)
 
-    argparser = ArgumentParser(description='Ak koyun ak bacağından, kara koyun kara bacağından asılır.')
+    argparser = ArgumentParser(description='Ak koyun ak bacağından, kara koyun kara bacağından asılır. Fakat koyunotlatan\'ın mahareti, renkten öte, otlatma sanatındadır.')
 
     argparser.add_argument('-i', '--id', type=str, dest="post_id",  help='Post/Submission ID')
     argparser.add_argument('-u', '--url', type=str, dest="post_url", help='Post/Submission URL')

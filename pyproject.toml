@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "koyunkirpan"
+name = "koyunotlatan"
 version = "0.1.0"
-description = "Ak koyun ak bacağından, kara koyun kara bacağından asılır."
+description = "Ak koyun ak bacağından, kara koyun kara bacağından asılır. Fakat koyunotlatan'ın mahareti, renkten öte, otlatma sanatındadır."
 authors = ["oldventura <oldventura@protonmail.com>"]
 maintainers = ["Asim-Tahir <asimtahir@protonmail.com>"]
 license = "GPLv3"
@@ -20,11 +20,11 @@ classifiers = [
   "Topic :: Communications :: Chat",
 ]
 packages = [
-    { include = "koyunkirpan" },
+    { include = "koyunotlatan" },
 ]
 
 [tool.poetry.scripts]
-dev = 'koyunkirpan.main:main'
+dev = 'koyunotlatan.main:main'
 
 [tool.poetry.dependencies]
 python = "~3.11"
@@ -33,11 +33,11 @@ psaw = "^0.1.0"
 numpy = "^1.26.3"
 
 [tool.poetry.urls]
-Homepage = "https://github.com/KGBTR/koyunkirpan"
-Documentation = "https://github.com/KGBTR/koyunkirpan/README.md"
-Repository = "https://github.com/KGBTR/koyunkirpan.git"
-Issues = "https://github.com/KGBTR/koyunkirpan/issues"
-Changelog = "https://github.com/KGBTR/koyunkirpan/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/KGBTR/koyunotlatan"
+Documentation = "https://github.com/KGBTR/koyunotlatan/README.md"
+Repository = "https://github.com/KGBTR/koyunotlatan.git"
+Issues = "https://github.com/KGBTR/koyunotlatan/issues"
+Changelog = "https://github.com/KGBTR/koyunotlatan/blob/main/CHANGELOG.md"
 
 
 [build-system]

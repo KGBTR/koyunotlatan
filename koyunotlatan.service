@@ -1,0 +1,15 @@
+[Unit]
+Description=Koyun Otlatan daemon service
+Wants=network-online.target local-fs.target koyunotlatan.timer
+After=network-online.target local-fs.target
+
+[Service]
+Type=exec
+ExecStart=/home/koyunotlatan/service/.venv/bin/python /home/koyunotlatan/service/koyunotlatan/main.py $OPTIONS
+Environment=PYTHONUNBUFFERED=true PYTHONPATH=/home/koyunotlatan/service PYTHONENV=production
+SyslogIdentifier=koyunotlatan
+NotifyAccess=all
+User=koyunotlatan
+
+[Install]
+WantedBy=multi-user.target

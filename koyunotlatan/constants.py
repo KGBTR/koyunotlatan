@@ -4,7 +4,7 @@ from distutils.util import strtobool
 import logging
 from typing import Literal
 
-logger = logging.getLogger('koyunkirpan')
+logger = logging.getLogger('koyunotlatan')
 
 NO_REPLY: bool
 PYTHONENV: Literal['development', 'production']
@@ -35,7 +35,7 @@ try:
 
     BASE_LOG_DIR = os.environ.get('BASE_LOG_DIR', path.resolve().as_posix())
   elif PYTHONENV == 'production':
-    path = Path('/var/log/koyunkirpan')
+    path = Path('/var/log/koyunotlatan')
     path.mkdir(parents=True, exist_ok=True)
 
     BASE_LOG_DIR = os.environ.get('BASE_LOG_DIR', path.resolve().as_posix())

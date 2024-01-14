@@ -12,12 +12,12 @@ from praw import Reddit
 from praw.models import Subreddit, Submission, Comment
 from psaw import PushshiftAPI
 
-from koyunkirpan.binary_comb import BinaryComb
-from koyunkirpan.constants import NO_REPLY, BOT_ACTIVE_SUBREDDITS
+from koyunotlatan.binary_comb import BinaryComb
+from koyunotlatan.constants import NO_REPLY, BOT_ACTIVE_SUBREDDITS
 
 warnings.filterwarnings('ignore')
 
-logger = logging.getLogger('koyunkirpan')
+logger = logging.getLogger('koyunotlatan')
 
 class Runner:
   reddit             : Reddit

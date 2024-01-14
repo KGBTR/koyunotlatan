@@ -1,1 +1,1 @@
-service: python koyunkirpan/main.py
+service: python koyunotlatan/main.py
