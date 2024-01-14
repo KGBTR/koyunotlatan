@@ -1,0 +1,39 @@
+{
+  "name": "koyunotlatan",
+  "description": "Ak koyun ak bacağından, kara koyun kara bacağından asılır. Fakat koyunotlatan'ın mahareti, renkten öte, otlatma sanatındadır.",
+  "image": "heroku/python",
+  "repository": "https://github.com/KGBTR/koyunotlatan",
+  "keywords": ["python", "reddit", "reddit-bot", "bot", "chat", "chatbot", "chat", "bot"],
+  "env": {
+    "NO_REPLY": {
+      "required": false,
+      "value": "False",
+      "description": "Should bot reply or not to the randomly selected submission / post. Default is False"
+    },
+    "BOT_CLIENT_ID": {
+      "required": true,
+      "value": "",
+      "description": "Look at from https://www.reddit.com/prefs/apps. Reddit app client id. 14 character length. Default is empty"
+    },
+    "BOT_CLIENT_SECRET": {
+      "required": true,
+      "value": "",
+      "description": "Look at from https://www.reddit.com/prefs/apps. Reddit app client secret. 27 character length. Default is empty"
+    },
+    "BOT_USERNAME": {
+      "required": true,
+      "value": "BotUsername",
+      "description": "Reddit bot account username(without u/). Like a BotName. Default is filler text"
+    },
+    "BOT_PASSWORD": {
+      "required": true,
+      "value": "B0tP455w0rd",
+      "description": "Reddit bot account password. Default is filler text"
+    },
+    "BOT_ACTIVE_SUBREDDITS": {
+      "required": true,
+      "value": "SubredditName",
+      "description": "Plus(+) seperated without whitespace subreddits where the bot will run(without r/). Example: \"funny+memes\". Default is filler text"
+    }
+  }
+}
