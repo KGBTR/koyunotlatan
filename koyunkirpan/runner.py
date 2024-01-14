@@ -13,7 +13,7 @@ from praw.models import Subreddit, Submission, Comment
 from psaw import PushshiftAPI
 
 from koyunkirpan.binary_comb import BinaryComb
-from koyunkirpan.constants import NO_REPLY
+from koyunkirpan.constants import NO_REPLY, BOT_ACTIVE_SUBREDDITS
 
 warnings.filterwarnings('ignore')
 
@@ -43,7 +43,7 @@ class Runner:
     self.flairs             = []
     self.keywords           = []
     self.replies            = {}
-    self.subreddit          = reddit.subreddit('KGBTR')
+    self.subreddit          = reddit.subreddit(BOT_ACTIVE_SUBREDDITS)
     self.forbidden_comments = ['[removed]', '[deleted]', '', ' ', None]
     self.path               = Path(__file__).parent
     self.search_limit       = 20
@@ -265,7 +265,7 @@ class Runner:
     if not post:
       logger.warn('Couldn\'t find a suitable post :(')
       return
-    
+
     logger.info(f'Selected post titled "{post.title}" at https://reddit.com{post.permalink}')
     self.post_keywords(post)
 
