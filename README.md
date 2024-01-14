@@ -86,9 +86,10 @@
 
 - Rename `praw.example.ini` to `praw.ini`
 
-  > For MacOSX or linux `mv praw.example.ini praw.ini`
+  > For MacOSX or Linux `mv praw.example.ini praw.ini`
 
-  > For Windows via _Powershell_ `Rename-Item praw.example.ini praw.ini` or via _CMD_ `rename praw.example.ini praw.ini`
+  > For Powershell `Rename-Item praw.example.ini praw.ini`
+  > For CMD `rename praw.example.ini praw.ini`
 
 or
 
