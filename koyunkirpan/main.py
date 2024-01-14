@@ -33,7 +33,7 @@ def main():
         )
       else:
         reddit = Reddit(
-          "koyunkirpan",
+          "koyunotlatan",
           user_agent=False,
           config_interpolation="basic",
         )
