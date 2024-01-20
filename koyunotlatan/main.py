@@ -35,7 +35,6 @@ def main():
         reddit = Reddit(
           "koyunotlatan",
           user_agent=False,
-          config_interpolation="basic",
         )
 
       logger.info(f'Started in "{"NO_REPLY" if NO_REPLY else "REPLY"}" mode as u/{reddit.user.me()}')
