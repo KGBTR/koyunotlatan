@@ -17,6 +17,6 @@ services:
        - ./requirements.txt:/home/koyunotlatan/service/requirements.txt
        - ./koyunotlatan:/home/koyunotlatan/service/koyunotlatan
        - ./praw.ini:/home/koyunotlatan/.config/praw.ini
-       - ./logs:${BASE_LOG_DIR:-/var/log/koyunotlatan}
+       - ./logs:/var/log/koyunotlatan
     env_file:
       - .env.docker
