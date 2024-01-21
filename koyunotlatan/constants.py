@@ -20,8 +20,8 @@ BOT_PASSWORD: str
 BOT_ACTIVE_SUBREDDITS: str
 
 try:
-  NO_REPLY = bool(strtobool(os.environ.get('NO_REPLY', default='True')))
   PYTHONENV = os.environ.get('PYTHONENV', default='development')
+  NO_REPLY = bool(strtobool(os.environ.get('NO_REPLY', default='true' if PYTHONENV == 'production' else 'false')))
   BASE_LOG_DIR = '/var/log/koyunotlatan'
 
   BOT_CLIENT_ID = os.environ.get('BOT_CLIENT_ID', default='')
