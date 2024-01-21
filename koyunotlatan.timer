@@ -1,5 +1,5 @@
 [Unit]
-Description="Koyun Otlatan timer that runs on every hour"
+Description="Koyun Otlatan timer"
 Wants=koyunotlatan.service
 
 [Timer]
