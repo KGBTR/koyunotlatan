@@ -9,10 +9,10 @@ logger = logging.getLogger('koyunotlatan')
 
 formatter = logging.Formatter(
   fmt="%(asctime)s, (%(name)s:%(levelname)s) [%(filename)s:%(lineno)d]: %(message)s",
-  datefmt="%d-%b-%Y %H:%M:%S"
+  datefmt="%d-%m-%Y %H:%M:%S"
 )
 
-fmt_date: str = "%d-%b-%Y"
+fmt_date: str = "%d-%m-%Y"
 formatted_today: str = datetime.today().strftime(fmt_date)
 
 # Create handlers

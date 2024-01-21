@@ -298,6 +298,7 @@ class Runner:
       logger.info("Starting search %s:" %(searches.index(search)+1))
       comments.append([])
 
+      # TODO: dynamize subreddit names
       gen   = api.search_comments(q=search, subreddit='KGBTR')
       cache = []
 
