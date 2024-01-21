@@ -1,0 +1,37 @@
+name: Release new version
+
+on:
+  push:
+    tags:
+      - v*.*.*
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Copy service files via SSH password
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          source: "koyunotlatan/*,koyunotlatan/data/*,scripts/*,koyunotlatan.service,koyunotlatan.timer,koyunotlatan.pkla,praw.example.ini,requirements.txt,LICENSE,pyproject.toml"
+          target: /home/koyunotlatan/service
+
+      - name: Setup service via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            /home/koyunotlatan/service/scripts/release.sh
+
+            # Fulfill credentials for praw.ini
+            perl -pe 's/<username>/${{ secrets.PRAW_USERNAME }}/g; s/<password>/${{ secrets.PRAW_PASSWORD }}/g; s/<client_id>/${{ secrets.PRAW_CLIENT_ID }}/g; s/<client_secret>/${{ secrets.PRAW_CLIENT_SECRET }}/g' /home/koyunotlatan/service/praw.example.ini > /home/koyunotlatan/service/praw.ini
