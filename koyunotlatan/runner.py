@@ -49,12 +49,13 @@ class Runner:
     self.search_limit       = 20
     self.post_limit         = 50
     self.alike_value        = 1.35
-    self.reply_comment      = """
-{comment}
+    self.reply_comment      = "{comment}"
+#     self.reply_comment      = """
+# {comment}
 
-^(If you have **any comments or suggestions** about the bot, please mention **Asim-Abi** by replying to **the bot comment**)
+# ^(If you have **any comments or suggestions** about the bot, please mention **Asim-Abi** by replying to **the bot comment**)
 
-^(This comment was automatically picked by **the koyunkırpan algorithm**)"""
+# ^(This comment was automatically picked by **the koyunkırpan algorithm**)"""
     self.load_replies()
     self.load_commented_on()
 

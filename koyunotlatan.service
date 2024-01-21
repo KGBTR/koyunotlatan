@@ -6,7 +6,7 @@ After=network-online.target local-fs.target
 [Service]
 Type=exec
 ExecStart=/home/koyunotlatan/service/.venv/bin/python /home/koyunotlatan/service/koyunotlatan/main.py $OPTIONS
-Environment=PYTHONUNBUFFERED=true PYTHONPATH=/home/koyunotlatan/service PYTHONENV=production
+Environment=PYTHONUNBUFFERED=true PYTHONPATH=/home/koyunotlatan/service
 SyslogIdentifier=koyunotlatan
 NotifyAccess=all
 User=koyunotlatan

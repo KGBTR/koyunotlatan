@@ -3,6 +3,7 @@
     "ms-python.python",
     "ms-python.vscode-pylance",
     "ms-python.black-formatter",
+    "ms-python.isort",
     "ms-azuretools.vscode-docker",
     "hangxingliu.vscode-systemd-support",
     "benspaulding.procfile"
