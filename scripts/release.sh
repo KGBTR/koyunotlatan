@@ -19,4 +19,5 @@ fi
 
 systemctl daemon-reload
 systemctl enable koyunotlatan.timer
+systemctl start koyunotlatan.timer
 systemctl start koyunotlatan.service
